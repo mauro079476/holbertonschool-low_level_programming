@@ -9,14 +9,14 @@
 */
 void *malloc_checked(unsigned int b)
 {
-	int *array;
+	unsigned int *array;
 
-	array = malloc(b * sizeof(int));
-	if (array != NULL)
+	array = malloc(b);
+	if (array == NULL)
 	{
 		free(array);
 		exit(98);
-	}	
+	}
 
 	return (array);
 }
