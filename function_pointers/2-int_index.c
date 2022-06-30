@@ -1,10 +1,11 @@
 #include "function_pointers.h"
 #include <stddef.h>
 /**
- * array_iterator - function as a parameter on each element of an array
+ * int_index - searches for an integer
  * @size: size
- * @action: action
  * @array: array
+ * @cmp: cmp
+ * Return: -1
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
