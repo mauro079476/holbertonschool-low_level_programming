@@ -1,8 +1,4 @@
-#include <stddef.h>
-#include <stdio.h>
 #include "3-calc.h"
-#include <stdlib.h>
-#include <string.h>
 
 int main(int argc, char *argv[])
 {
@@ -22,11 +18,6 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 			exit (99);
-	}
-	opt = *argv[2];
-	{
-	printf ("Error\n");
-	exit(100);
 	}
 	result = func(arg1, arg2);
 	printf ("%d\n", result);
