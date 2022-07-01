@@ -1,4 +1,10 @@
 #include "3-calc.h"
+/**
+* main - main
+* @argc: int
+* @argv: char
+* Return: int
+*/
 
 int main(int argc, char *argv[])
 {
@@ -19,6 +25,6 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	result = func(arg1, arg2);
-	printf ("%d\n", result);
+	printf("%d\n", result);
 	return (0);
 }
