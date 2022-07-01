@@ -7,7 +7,6 @@
 int main(int argc, char *argv[])
 {
 	int arg1, arg2, result;
-	char opt;
 	int (*func)(int, int);
 
 	if (argc != 4)
@@ -23,8 +22,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 			exit (99);
 	}
-	opt = *argv[2];
-	if ((opt == '/' || opt == '%') && arg2 == 0)
 	{
 	printf ("Error\n");
 	exit(100);
