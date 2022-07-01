@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	if (func == NULL && strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
-			exit(99);
+		exit(99);
 	}
 	result = func(arg1, arg2);
 	printf ("%d\n", result);
