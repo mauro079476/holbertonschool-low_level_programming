@@ -1,6 +1,6 @@
-src = main.c school.c
-name = school
-cc = gcc
+  CC = gcc
+  src = main.c school.c
+  name = school
 
 all:
 $(cc) $(src) -o $(name)
