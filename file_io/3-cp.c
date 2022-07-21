@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	exit(0);
 }
 /**
- * copies a text
+ * copy_text - copies a text
  * @to: this file
  * @from: this file
 */
