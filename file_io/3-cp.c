@@ -32,15 +32,17 @@ void copy_text(const char *from, const char *to)
 	file_to = open(to, O_CREAT | O_TRUNC | O_WRONLY, mode);
 	if (file_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to), exit(99);
-	readmE = read(file_from, cCount, 1024);
-	if (readmE == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from), exit(98);
-	writemE = write(file_to, cCount, readmE);
-	if (writemE == -1)
-	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to), exit(99);
+	while (readmE == 1024)
+	{
+		readmE = read(file_from, cCount, 1024);
+		if (readmE == -1)
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from), exit(98);
+		writemE = write(file_to, cCount, readmE);
+		if (writemE == -1)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to), exit(99);
+	}
 	if (close(file_to) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
 	if (close(file_from) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
-
 }
